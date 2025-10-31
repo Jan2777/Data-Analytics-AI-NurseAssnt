@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Nurse Assistant (Tamil)</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(to right, #e6f0ff, #f9fbff);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #004aad;
+            margin-bottom: 25px;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        textarea {
+            width: 70%;
+            height: 120px;
+            padding: 12px;
+            border: 1.5px solid #a3bffa;
+            border-radius: 10px;
+            font-size: 16px;
+            resize: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #004aad;
+        }
+
+        button, select {
+            margin: 10px;
+            padding: 10px 18px;
+            font-size: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #004aad;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover, select:hover {
+            background-color: #005be0;
+            transform: scale(1.03);
+        }
+
+        select {
+            background-color: #eaf0ff;
+            color: #004aad;
+            border: 1.5px solid #a3bffa;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #222;
+            background: #f2f7ff;
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 74, 173, 0.1);
+            min-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Nurse Assistant - Tamil Support</h1>
+
+    <textarea id="textInput" placeholder="Type your Tamil text here or use voice..."></textarea><br>
+
+    <button id="recordBtn">🎙️ Record Audio (Tamil)</button>
+    <button id="playBtn">🔊 Play Response Audio</button><br>
+
+    <select id="taskSelect">
+        <option value="summarize">Summarize</option>
+        <option value="translate">Translate to English</option>
+        <option value="symptom_analysis">Analyze Symptoms</option>
+        <option value="medication_reminder">Set Medication Reminder</option>
+        <option value="cultural_tip">Cultural Health Tip</option>
+    </select>
+
+    <button id="submitBtn">Process</button>
+
+    <p id="output"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
